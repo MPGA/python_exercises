@@ -26,7 +26,7 @@ contacts = {
 
 def continueMenu():
     print('')
-    input("Press enter to continue")
+    raw_input("Press enter to continue")
 
 def menu():
     os.system("clear")
@@ -52,9 +52,9 @@ def printAllContacts():
 			print('\n'+'name: ' + contact[1]['name'] + '\n' + 'address: ' + contact[1]['address'] + '\n' + 'phone: '+ contact[1]['phone'])
 
 def addContacts():
-    name = input("Enter new contact name:")
-    address = input("Enter new contact address:")
-    phone = input("Enter new contact phone")
+    name = raw_input("Enter new contact name: ")
+    address = raw_input("Enter new contact address: ")
+    phone = raw_input("Enter new contact phone: ")
     contacts.update({len(contacts)+1: {"name":name,"address":address,"phone":phone}})
 
 while True:
@@ -63,7 +63,7 @@ while True:
     option = input("select an option:")
 
     if option==1:
-        printContact(input('name:'))
+        printContact(raw_input('name:'))
         continueMenu()
     elif option==2:
         printAllContacts()
@@ -74,3 +74,5 @@ while True:
     elif option==4:
     
         break
+
+
